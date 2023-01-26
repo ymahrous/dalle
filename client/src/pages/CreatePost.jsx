@@ -70,8 +70,8 @@ export default function CreatePost() {
       </div>
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
-          <FormField labelName='Your Name' type='text' name='name' placeholder='Joe Doe' value={form.name} handleChange={handleChange} />
-          <FormField labelName='Your Prompt' type='text' name='prompt' placeholder='Something happening somewhere in the absolute somewhere' value={form.prompt} handleChange={handleChange} isSurpriseMe handleSurpriseMe={handleSurpriseMe} />
+          <FormField labelName='Name' type='text' name='name' placeholder='Joe Doe' value={form.name} handleChange={handleChange} />
+          <FormField labelName='Prompt' type='text' name='prompt' placeholder='Something happening somewhere in the absolute somewhere' value={form.prompt} handleChange={handleChange} isSurpriseMe handleSurpriseMe={handleSurpriseMe} />
           <div className="relative bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
             {form.photo ? (<img src={form.photo} alt={form.prompt} className='w-full h-full object-contain' />) : (<img src={preview} alt="preview" className="w-9/12 h-9/12 object-contain opacity-40" />)}
             {generatingImg && (<div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg"><Loader /></div>)}
