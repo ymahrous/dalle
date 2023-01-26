@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Loader, Card, FormField } from '../components/index';
 
-const url = 'http://localhost:8080/api/v1';
 const RenderedCards = ({ data, title }) => {
   if(data?.length>0) {
     return data.map((post) => <Card key={post._id} {...post} />);
@@ -29,7 +28,7 @@ export default function Home() {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const response = await fetch(url + '/post', {
+      const response = await fetch('https://dalle-oakg.onrender.com/api/v1/post', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
