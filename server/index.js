@@ -17,12 +17,11 @@ app.get('/', async (req, res) => {
     res.send('Welcome to DALL-E');
 });
 
-const port = 8080;
 const startServer = async () => {
     try {
         connectDB(process.env.MONGODB_URL);
-        app.listen(port, () => {
-            console.log('running on port ' + port);
+        app.listen(8080, () => {
+            console.log('running on command');
         });
     } catch (error) {
         console.log(error);
