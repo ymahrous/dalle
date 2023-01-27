@@ -53,7 +53,7 @@ export default function Home() {
         <p className='mt-2 text-[#666e75] text-[16px] max-w-[500px]'>AI-generated artwork using DALL-E</p>
       </div>
       <div className='mt-16'>
-        <FormField labelName='Search through our amazing community images' type='text' name='text' placeholder='Search' value={searchText} handleChange={handleSearchChange} />
+        <FormField type='text' name='text' placeholder='Search' value={searchText} handleChange={handleSearchChange} />
       </div>
       <div className='mt-10'>
         {loading ? (<div className='flex justify-center items-center'><Loader /></div>) : (<>{searchText && <h2 className='font-medium text-[#666e75] text-xl mb-3'>results for <span className='text-[#222328]'>{searchText}</span></h2>}</>)}
